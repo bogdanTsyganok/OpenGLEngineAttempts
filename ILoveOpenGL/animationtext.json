@@ -1,0 +1,66 @@
+{
+  "SerialCommands": [
+    {
+      "CmdName": "MoveCmd",
+      "ObjectName": "Vurdalak",
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 60.0,
+      "Time": 9.5
+    },
+    {
+      "CmdName": "Waypoint",
+      "ObjectName": "Vurdalak",
+      "Moves": 
+      [
+        {
+          "X": 14.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "Time": 1.5
+        },
+        {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -20.0,
+          "Time": 1.5
+        }
+      ]
+    }
+  ],
+  "ParallelCommands": [
+    {
+      "CmdName": "Follow",
+      "ObjectName": "Hero",
+      "TargetName": "Vurdalak",
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": -20.0,
+      "MaxSpeed": 1.5
+    },
+    {
+      "CmdName": "CmdGroup",
+      "SerialCommands": [
+        {
+          "CmdName": "Trigger",
+          "ObjectName": "Vurdalak",
+          "X": 0.0,
+          "Y": 83.0,
+          "Z": 340.0,
+          "Radius": 10.5,
+          "Command": {
+            "CmdName": "RotateCmd",
+            "ObjectName": "Vurdalak",
+            "X": 0.0,
+            "Y": 1.56,
+            "Z": 0.0,
+            "Time": 3.5
+          } 
+        }
+      ],
+      "ParallelCommands": [
+
+      ]
+    }
+  ]
+}
